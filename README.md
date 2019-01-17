@@ -28,5 +28,6 @@ Generative models are interesting topic in DL. In this tutorial, we are focusing
 
 
 ## Courses: 
+[Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
 
 ## References:
