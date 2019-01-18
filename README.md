@@ -15,16 +15,34 @@ It can be said that Generative models begins with sampling. Generative models ar
 
 ## Sampling from Bayesian Classifier:
 - We use sampling data to generate new samples (using distribution of the training data).
-- If we know the probability distribution of the training data , we can sample from it 
+- If we know the probability distribution of the training data , we can sample from it.
+- Two ways of sampling:
+  - **First Method**: Sample from a given digit/class
+    - Pick a class, e.g. y=2
+    - If it is known p(x|y=2) is Gaussian
+    - Sample from this Gaussian using Scipy (mvn.rvs(mean,cov))
+  - **Second Method**: Sample from p(y)p(x|y) => p(x,y)
+    - If there is graphical model (e.g. y-> x), and they have different distribution,
+    - If p(y) and p(x|y) are known and y has its own distribution (e.g. categorical or discrete distribution)
+    - Sample 
 
+## Unsupervised Deep Learning vs Supervised Deep Learning (Recall):
+- **Unsupervised Deep Learning**: trying to learn structure of inputs 
+  - **Example1**: If the structure of poetry/text can be learned, it is possible to generate text/poetry that resembles the given text/poetry.
+  - **Example2**: If the structure of art can be learned, it is possible to make new art/drawings that resembles the given art/drawings.
+  - **Example3**: If the structure of music can be learned, it is possible to create new music that resembles the given music.
+- **Supervised Deep Learning**: trying to map inputs to targets
 
 ## Gaussian Mixture Model (GMM):
+- Single gaussian model learns blurry images if there are more than one gaussian distribution (e.g. different types of writing digits in handwriting).
+- To get best result, GMM have to used to model more than one gaussian distribution.
 - GMM is latent variable model.
-- With GMM, multi-modal distribution can be modelled.
+- With GMM, multi-modal distribution can be modelled at the same time.
 - Multiple gaussians in different proportions are fitted into the GMM. 
 - [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
 
-- 2 clusters: p(x)=p(z=1) p(x|z=1) + p(z=2) p(x|z=2).
+- 2 clusters: p(x)=p(z=1) p(x|z=1) + p(z=2) p(x|z=2). In figure, there are 2 different proportions gaussian distributions.
+
 ![gmm](https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png) [Udemy GAN-VAE]
 
 ### Expectation-Maximization (EM):
@@ -51,6 +69,7 @@ It can be said that Generative models begins with sampling. Generative models ar
 ### Bayesian:
 
 ## Generative Adversial Networks (GANs):
+- There are 2 different networks: generator and discriminator, compete against each other 
 
 ![gan_gif](https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif) [Blog Open-AI]
 
