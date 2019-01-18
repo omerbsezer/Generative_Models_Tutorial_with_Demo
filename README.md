@@ -46,14 +46,15 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 ![running_human](https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif) [Blog Open-AI]
 
 ## Important Papers:
-Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
+- Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
+- Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
 
 ## Courses: 
-[Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
+- [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
 
 ## References:
-[Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
-[PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
+- [Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
+- [PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
 
 ## Notes:
-PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
+- PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
