@@ -11,17 +11,37 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 Generative models are a subset of unsupervised learning that generate new sample/data by using given some training data (from same distribution). In our daily life, there are huge data generated from electronic devices, computers, cameras, iot, etc. (e.g. millions of images, sentences, or sounds, etc.) In generative models, a large amount of data in some domain firstly is collected and then model is trained with this large amount of data to generate data like it. There are lots of application area generative models are used:  image denoising, inpainting, super-resolution, structured prediction, exploration, etc.. Generative models are also promising in the long term future because it has a potential power to learn the natural features of a dataset automatically. Generative models are mostly used to generate images (vision area). In the recent studies, it will also used to generate sentences (natural language processing area). 
 
-## Unsupervised Learning vs Supervised Learning:
+It can be said that Generative models begins with sampling. Generative models are told in this tutorial according to the development steps of generative models: Sampling, Gaussian Mixture Models, Variational AutoEncoder, Generative Adversial Networks.   
 
-### Gaussian Mixture Model (GMM):
+## Sampling from Bayesian Classifier:
+- We use sampling data to generate new samples (using distribution of the training data).
+- If we know the probability distribution of the training data , we can sample from it 
 
-## Auto-Regressive Models:
 
-### PixelRNN
+## Gaussian Mixture Model (GMM):
+- GMM is latent variable model.
+- With GMM, multi-modal distribution can be modelled.
+- Multiple gaussians in different proportions are fitted into the GMM. 
+- [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
 
-### PixelCNN
+- 2 clusters: p(x)=p(z=1) p(x|z=1) + p(z=2) p(x|z=2).
+![gmm](https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png) [Udemy GAN-VAE]
 
-## Variational Auto Encoder (VAE):
+### Expectation-Maximization (EM):
+- GMM is trained using Expectation-Maximization (EM)
+- EM is iterative algorithm that let the likelihood improves at each step.
+- The aim of EM is to reach maximum likelihood.
+
+
+## Variational AutoEncoder (VAE):
+
+- Variational inference (VI) is the significant component of Variational AutoEncoders.
+- VI ~ Bayesian extension of EM.
+- In GMM/K-Means Clustering, you have choose the number of clusters.
+- VI-GMM (Variational inference-Gaussian Mixture Model) automatically finds the number of cluster.
+
+![variational-inference](https://user-images.githubusercontent.com/10358317/51386321-128ca500-1b33-11e9-8367-ea8c73e305c1.png)
+[Udemy GAN-VAE]
 
 ![vae_learning](https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif) [Blog Open-AI]
 
@@ -45,6 +65,13 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 
 ![running_human](https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif) [Blog Open-AI]
 
+
+## Auto-Regressive Models:
+
+### PixelRNN
+
+### PixelCNN
+
 ## Important Papers:
 - Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
 - Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
@@ -55,6 +82,7 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 ## References:
 - [Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
 - [PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
+- [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 
 ## Notes:
 - PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
