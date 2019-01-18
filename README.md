@@ -119,6 +119,94 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ### DCGAN
 
+### CycleGAN
+[Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
+
+![cyclegan](https://user-images.githubusercontent.com/10358317/51417525-704eda80-1b8f-11e9-93ce-2d3c14a3aee1.jpeg)
+
+### Pix2Pix
+[Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
+
+![pix2pix](https://user-images.githubusercontent.com/10358317/51417511-6e851700-1b8f-11e9-84ed-64cfb0cd6e58.png)
+
+### PixelDTGAN
+[Pixel-Level Domain Transfer](https://arxiv.org/pdf/1603.07442.pdf)
+
+![pixelgan](https://user-images.githubusercontent.com/10358317/51417512-6e851700-1b8f-11e9-8557-003e9c4e9ec5.png)
+
+### Pose Guided
+[Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
+
+![poseguided](https://user-images.githubusercontent.com/10358317/51417513-6e851700-1b8f-11e9-90b8-314377157b6f.png)
+
+### SR GAN
+[Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf)
+
+![srgan](https://user-images.githubusercontent.com/10358317/51417515-6f1dad80-1b8f-11e9-9312-ee6f02e6f4f5.png)
+
+### StackGAN
+[StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1612.03242v1.pdf)
+
+![stackgan](https://user-images.githubusercontent.com/10358317/51417516-6f1dad80-1b8f-11e9-9309-d44ca62983c7.png)
+
+### TP-GAN
+[Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
+
+![tp-gan](https://user-images.githubusercontent.com/10358317/51417517-6f1dad80-1b8f-11e9-89ea-09fdaa77d794.png)
+
+### Anime Generation
+[Towards the Automatic Anime Characters Creation with Generative Adversarial Networks](https://arxiv.org/pdf/1708.05509.pdf)
+
+![animegeneration](https://user-images.githubusercontent.com/10358317/51417518-6fb64400-1b8f-11e9-8205-58d408e3556c.png)
+
+### 3D GAN
+[Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
+
+![3dgan](https://user-images.githubusercontent.com/10358317/51417520-6fb64400-1b8f-11e9-8f09-806b6636a13b.png)
+
+### Age-cGAN
+[FACE AGING WITH CONDITIONAL GENERATIVE ADVERSARIAL NETWORKS](https://arxiv.org/pdf/1702.01983.pdf)
+
+![age-cgan](https://user-images.githubusercontent.com/10358317/51417523-6fb64400-1b8f-11e9-8e7b-80fe044a6586.png)
+
+### AnoGAN
+[Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery](https://arxiv.org/pdf/1703.05921.pdf)
+
+![anogan](https://user-images.githubusercontent.com/10358317/51417524-704eda80-1b8f-11e9-914c-79ed3c528c21.png)
+
+### DiscoGAN
+[Learning to Discover Cross-Domain Relations with Generative Adversarial Networks](https://arxiv.org/pdf/1703.05192.pdf)
+
+![discogan](https://user-images.githubusercontent.com/10358317/51417526-70e77100-1b8f-11e9-8e2d-d25891a02ff3.png)
+
+### DTN
+[UNSUPERVISED CROSS-DOMAIN IMAGE GENERATION](https://arxiv.org/pdf/1611.02200.pdf)
+
+![dtn](https://user-images.githubusercontent.com/10358317/51417527-70e77100-1b8f-11e9-8e0b-9cc45fa2d632.png)
+
+### IcGAN
+[Invertible Conditional GANs for image editing](https://arxiv.org/pdf/1611.06355.pdf)
+
+![icgan](https://user-images.githubusercontent.com/10358317/51417528-70e77100-1b8f-11e9-94d9-3f0c91cf123a.png)
+
+### MGAN
+[Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks](https://arxiv.org/pdf/1604.04382.pdf)
+
+![mgan](https://user-images.githubusercontent.com/10358317/51417529-71800780-1b8f-11e9-9834-a4812af4518f.png)
+
+### MidiNet
+[MIDINET: A CONVOLUTIONAL GENERATIVE ADVERSARIAL NETWORK FOR SYMBOLIC-DOMAIN MUSIC GENERATION](https://arxiv.org/pdf/1703.10847.pdf)
+
+![midinet](https://user-images.githubusercontent.com/10358317/51417530-71800780-1b8f-11e9-801b-896122c13614.png)
+
+### PerceptualGAN
+[Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
+
+![perceptualgan](https://user-images.githubusercontent.com/10358317/51417531-71800780-1b8f-11e9-8df1-0bb1befe4d9c.png)
+
+
+
+
 ## Generative Model in Reinforcement Learning:
 
 ### Generative Adversarial Imitation Learning:
@@ -149,7 +237,7 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - Huang aet al., [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
 - Isola et al., [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
 - Wang et al., [High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs](https://arxiv.org/pdf/1711.11585.pdf)
-- Zhang et al., [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks (https://arxiv.org/pdf/1612.03242v1.pdf)
+- Zhang et al., [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1612.03242v1.pdf)
 - Reed et al., [Generative Adversarial Text to Image Synthesis](https://arxiv.org/pdf/1605.05396.pdf)
 - Liu et al., [Coupled Generative Adversarial Networks](https://arxiv.org/pdf/1606.07536.pdf)
 - Kim et al., [Learning to Discover Cross-Domain Relations with Generative Adversarial Networks](https://arxiv.org/pdf/1703.05192.pdf)
