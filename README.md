@@ -32,6 +32,8 @@ Generative models are a subset of unsupervised learning that generate new sample
 
 ## Generative Adversial Networks (GANs):
 
+![gan_gif](https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif)
+
 ### DCGAN
 
 ## Important Papers:
