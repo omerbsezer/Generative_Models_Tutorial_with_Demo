@@ -8,10 +8,45 @@ Generative models are interesting topic in ML. Generative models are a subset of
 # Table Of Content
 
 ## What is Generative Models? <a name="whatisGM"></a>
-
-Generative models are a subset of unsupervised learning that generate new sample/data by using given some training data (from same distribution). In our daily life, there are huge data generated from electronic devices, computers, cameras, iot, etc. (e.g. millions of images, sentences, or sounds, etc.) In generative models, a large amount of data in some domain firstly is collected and then model is trained with this large amount of data to generate data like it. There are lots of application area generative models are used:  image denoising, inpainting, super-resolution, structured prediction, exploration, etc.. Generative models are also promising in the long term future because it has a potential power to learn the natural features of a dataset automatically. Generative models are mostly used to generate images (vision area). In the recent studies, it will also used to generate sentences (natural language processing area). 
-
-It can be said that Generative models begins with sampling. Generative models are told in this tutorial according to the development steps of generative models: Sampling, Gaussian Mixture Models, Variational AutoEncoder, Generative Adversial Networks.   
+- Generative models are a subset of unsupervised learning that generate new sample/data by using given some training data (from same distribution). In our daily life, there are huge data generated from electronic devices, computers, cameras, iot, etc. (e.g. millions of images, sentences, or sounds, etc.) 
+- In generative models, a large amount of data in some domain firstly is collected and then model is trained with this large amount of data to generate data like it. 
+- There are [lots of applications](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900) for generative models:  
+  - Image Denoising, 
+  - Image Enhancement, 
+  - [Image Inpainting](https://github.com/pathak22/context-encoder), 
+  - [Super-resolution (upsampling): SRGAN](https://arxiv.org/pdf/1609.04802.pdf), 
+  - [Generate 3D objects: 3DGAN](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf), [Video](https://youtu.be/HO1LYJb818Q) 
+  - Creating Art:
+     - [Create Anime Characters](https://arxiv.org/pdf/1708.05509.pdf)
+     - [Transform images from one domain (say real scenery) to another domain (Monet paintings or Van Gogh):CycleGAN](https://github.com/junyanz/CycleGAN)
+     - [Creating Emoji: DTN](https://arxiv.org/pdf/1611.02200.pdf)
+  - [Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
+  - [Creating clothing images and styles from an image: PixelDTGAN](https://arxiv.org/pdf/1603.07442.pdf)
+  - [Face Synthesis: TP-GAN](https://arxiv.org/pdf/1704.04086.pdf)
+  - [Image-to-Image Translation: Pix2Pix](https://github.com/phillipi/pix2pix)
+      - Labels to Street Scene
+      - Aerial to Map
+      - Sketch to Realistic Image
+  - [High-resolution Image Synthesis](https://tcwang0509.github.io/pix2pixHD/)
+  - [Text to image: StackGAN](https://github.com/hanzhanggit/StackGAN), [Paper](https://arxiv.org/pdf/1612.03242v1.pdf)
+  - [Text to Image Synthesis](https://arxiv.org/pdf/1605.05396.pdf)
+  - [Learn Joint Distribution: CoGAN](https://arxiv.org/pdf/1606.07536.pdf)
+  - [Transfering style (or patterns) from one domain (handbag) to another (shoe): DiscoGAN](https://github.com/carpedm20/DiscoGAN-pytorch)
+  - [Texture Synthesis: MGAN](https://arxiv.org/pdf/1604.04382.pdf)
+  - [Image Editing: IcGAN](https://github.com/Guim3/IcGAN)
+  - [Face Aging: Age-cGAN](https://arxiv.org/pdf/1702.01983.pdf)
+  - [Neural Photo Editor](https://github.com/ajbrock/Neural-Photo-Editor)
+  - [Medical (Anomaly Detection): AnoGAN](https://arxiv.org/pdf/1703.05921.pdf)
+  - [Music Generation: MidiNet](https://arxiv.org/pdf/1703.10847.pdf)
+  - [Video Generation](https://youtu.be/Pt1W_v-yQhw)
+  - [Image Blending: GP-GAN](https://github.com/wuhuikai/GP-GAN)
+  - [Object Detection: PerceptualGAN](https://arxiv.org/pdf/1706.05274v2.pdf)
+  - Natural Language:
+      - Artical Spinning
+      
+- Generative models are also promising in the long term future because it has a potential power to learn the natural features of a dataset automatically. 
+- Generative models are mostly used to generate images (vision area). In the recent studies, it will also used to generate sentences (natural language processing area). 
+- It can be said that Generative models begins with sampling. Generative models are told in this tutorial according to the development steps of generative models: Sampling, Gaussian Mixture Models, Variational AutoEncoder, Generative Adversial Networks.   
 
 ## Preliminary (Recall):
 - **Bayesian Rule**: p(z|x)= p(x|z) p(z) /p(x)
@@ -45,15 +80,10 @@ It can be said that Generative models begins with sampling. Generative models ar
 - **Supervised Deep Learning**: trying to map inputs to targets
 
 ## Gaussian Mixture Model (GMM):
-- [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
 - Single gaussian model learns blurry images if there are more than one gaussian distribution (e.g. different types of writing digits in handwriting).
 - To get best result, GMM have to used to model more than one gaussian distribution.
-- GMM is latent variable model.
-- With GMM, multi-modal distribution can be modelled at the same time.
+- GMM is latent variable model. With GMM, multi-modal distribution can be modelled at the same time.
 - Multiple gaussians in different proportions are fitted into the GMM. 
-
-
-
 - 2 clusters: p(x)=p(z=1) p(x|z=1) + p(z=2) p(x|z=2). In figure, there are 2 different proportions gaussian distributions.
 
 ![gmm](https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png) [Udemy GAN-VAE]
@@ -82,7 +112,8 @@ It can be said that Generative models begins with sampling. Generative models ar
 ### Bayesian:
 
 ## Generative Adversial Networks (GANs):
-- There are 2 different networks: generator and discriminator, compete against each other 
+- There are 2 different networks: generator and discriminator, compete against each other.
+- GANs are interesting because it generates samples exceptionally good.
 
 ![gan_gif](https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif) [Blog Open-AI]
 
@@ -106,7 +137,30 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 
 ## Important Papers:
 - Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
-- Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+- Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+- Ledig et al., [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf), 
+- Jiajun Wu et al., [Learning a Probabilistic Latent Space of Object
+Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
+- Jin et al., [Towards the Automatic Anime Characters Creation with Generative Adversarial Networks](https://arxiv.org/pdf/1708.05509.pdf)
+- Zhu et al., [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
+- Taigman et al., [UNSUPERVISED CROSS-DOMAIN IMAGE GENERATION](https://arxiv.org/pdf/1611.02200.pdf)
+- MA et al., [Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
+- Yoo et al., [Pixel-Level Domain Transfer](https://arxiv.org/pdf/1603.07442.pdf)
+- Huang aet al., [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
+- Isola et al., [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
+- Wang et al., [High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs](https://arxiv.org/pdf/1711.11585.pdf)
+- Zhang et al., [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks (https://arxiv.org/pdf/1612.03242v1.pdf)
+- Reed et al., [Generative Adversarial Text to Image Synthesis](https://arxiv.org/pdf/1605.05396.pdf)
+- Liu et al., [Coupled Generative Adversarial Networks](https://arxiv.org/pdf/1606.07536.pdf)
+- Kim et al., [Learning to Discover Cross-Domain Relations with Generative Adversarial Networks](https://arxiv.org/pdf/1703.05192.pdf)
+- Li et al., [Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks](https://arxiv.org/pdf/1604.04382.pdf)
+- Perarnau et al., [Invertible Conditional GANs for image editing](https://arxiv.org/pdf/1611.06355.pdf)
+- Antipov et al., [FACE AGING WITH CONDITIONAL GENERATIVE ADVERSARIAL NETWORKS](https://arxiv.org/pdf/1702.01983.pdf)
+- Schlegl et al., [Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery](https://arxiv.org/pdf/1703.05921.pdf)
+- Yang et al., [MIDINET: A CONVOLUTIONAL GENERATIVE ADVERSARIAL NETWORK FOR SYMBOLIC-DOMAIN MUSIC GENERATION](https://arxiv.org/pdf/1703.10847.pdf)
+- Wu et al., [GP-GAN: Towards Realistic High-Resolution Image Blending](https://arxiv.org/pdf/1703.07195.pdf)
+- Li et al., [Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
+
 
 ## Courses: 
 - [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
@@ -117,4 +171,5 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 - [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 
 ## Notes:
+- [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
 - PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
