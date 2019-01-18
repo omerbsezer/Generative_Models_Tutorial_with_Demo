@@ -23,7 +23,7 @@ Generative models are a subset of unsupervised learning that generate new sample
 
 ## Variational Auto Encoder (VAE):
 
-![vae_learning](https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif)
+![vae_learning](https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif) [Blog Open-AI]
 
 
 ### AutoEncoder:
@@ -32,7 +32,7 @@ Generative models are a subset of unsupervised learning that generate new sample
 
 ## Generative Adversial Networks (GANs):
 
-![gan_gif](https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif)
+![gan_gif](https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif) [Blog Open-AI]
 
 ### DCGAN
 
@@ -43,6 +43,7 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 
 "The standard reinforcement learning setting usually requires one to design a reward function that describes the desired behavior of the agent. However, in practice this can sometimes involve expensive trial-and-error process to get the details right. In contrast, in imitation learning the agent learns from example demonstrations (for example provided by teleoperation in robotics), eliminating the need to design a reward function. This approach can be used to learn policies from expert demonstrations (without rewards) on hard OpenAI Gym environments, such as Ant and Humanoid." [Blog Open-AI]. 
 
+![running_human](https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif) [Blog Open-AI]
 
 ## Important Papers:
 Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
