@@ -13,6 +13,17 @@ Generative models are a subset of unsupervised learning that generate new sample
 
 It can be said that Generative models begins with sampling. Generative models are told in this tutorial according to the development steps of generative models: Sampling, Gaussian Mixture Models, Variational AutoEncoder, Generative Adversial Networks.   
 
+## Preliminary (Recall):
+- **Bayesian Rule**: p(z|x)= p(x|z) p(z) /p(x)
+- **Prior Distribution**: "often simply called the prior, of an uncertain quantity is the probability distribution that would express one's beliefs about this quantity before some evidence is taken into account." (e.g. p(z)) 
+- **Posterior Distribution:** is a probability distribution that represents your updated beliefs about the parameter after having seen the data. (e.g. p(z|x))
+- **Posterior probability = prior probability + new evidence (called likelihood)**
+- **Bayesian Analysis**:
+  - Prior distribution: p(z)
+  - Gather data
+  - "Update your prior distribution with the data using Bayes' theorem to obtain a posterior distribution."
+  - "Analyze the posterior distribution and summarize it (mean, median, etc.)"
+
 ## Sampling from Bayesian Classifier:
 - We use sampling data to generate new samples (using distribution of the training data).
 - If we know the probability distribution of the training data , we can sample from it.
@@ -34,12 +45,14 @@ It can be said that Generative models begins with sampling. Generative models ar
 - **Supervised Deep Learning**: trying to map inputs to targets
 
 ## Gaussian Mixture Model (GMM):
+- [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
 - Single gaussian model learns blurry images if there are more than one gaussian distribution (e.g. different types of writing digits in handwriting).
 - To get best result, GMM have to used to model more than one gaussian distribution.
 - GMM is latent variable model.
 - With GMM, multi-modal distribution can be modelled at the same time.
 - Multiple gaussians in different proportions are fitted into the GMM. 
-- [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
+
+
 
 - 2 clusters: p(x)=p(z=1) p(x|z=1) + p(z=2) p(x|z=2). In figure, there are 2 different proportions gaussian distributions.
 
