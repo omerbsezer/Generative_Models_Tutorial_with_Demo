@@ -36,14 +36,23 @@ Generative models are a subset of unsupervised learning that generate new sample
 
 ### DCGAN
 
-## Important Papers:
+## Generative Model in Reinforcement Learning:
 
+### Generative Adversarial Imitation Learning:
+Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
+
+"The standard reinforcement learning setting usually requires one to design a reward function that describes the desired behavior of the agent. However, in practice this can sometimes involve expensive trial-and-error process to get the details right. In contrast, in imitation learning the agent learns from example demonstrations (for example provided by teleoperation in robotics), eliminating the need to design a reward function. This approach can be used to learn policies from expert demonstrations (without rewards) on hard OpenAI Gym environments, such as Ant and Humanoid." [Blog Open-AI]. 
+
+
+## Important Papers:
+Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
 
 ## Courses: 
 [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
 
 ## References:
-https://blog.openai.com/generative-models/#going-forward
+[Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
+[PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
 
 ## Notes:
 PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
