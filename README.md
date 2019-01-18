@@ -134,12 +134,12 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![pixelgan](https://user-images.githubusercontent.com/10358317/51417512-6e851700-1b8f-11e9-8557-003e9c4e9ec5.png)
 
-### Pose Guided
+### PoseGuided
 [Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
 
 ![poseguided](https://user-images.githubusercontent.com/10358317/51417513-6e851700-1b8f-11e9-90b8-314377157b6f.png)
 
-### SR GAN
+### SRGAN
 [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf)
 
 ![srgan](https://user-images.githubusercontent.com/10358317/51417515-6f1dad80-1b8f-11e9-9312-ee6f02e6f4f5.png)
@@ -149,7 +149,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![stackgan](https://user-images.githubusercontent.com/10358317/51417516-6f1dad80-1b8f-11e9-9309-d44ca62983c7.png)
 
-### TP-GAN
+### TPGAN
 [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
 
 ![tp-gan](https://user-images.githubusercontent.com/10358317/51417517-6f1dad80-1b8f-11e9-89ea-09fdaa77d794.png)
@@ -159,7 +159,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![animegeneration](https://user-images.githubusercontent.com/10358317/51417518-6fb64400-1b8f-11e9-8205-58d408e3556c.png)
 
-### 3D GAN
+### 3DGAN
 [Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
 
 ![3dgan](https://user-images.githubusercontent.com/10358317/51417520-6fb64400-1b8f-11e9-8f09-806b6636a13b.png)
@@ -203,8 +203,6 @@ Generative models are interesting topic in ML. Generative models are a subset of
 [Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
 
 ![perceptualgan](https://user-images.githubusercontent.com/10358317/51417531-71800780-1b8f-11e9-8df1-0bb1befe4d9c.png)
-
-
 
 
 ## Generative Model in Reinforcement Learning:
