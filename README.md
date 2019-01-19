@@ -160,6 +160,25 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ### Cost Function of VAE
 - Evidence Lower Bound (ELBO) is our objective function that has to be maximized.
+- ELBO consists of two terms: Expected Log-Likelihood of the data and KL divergence between q(z|x) and p(z). 
+
+![elbo](https://user-images.githubusercontent.com/10358317/51432073-c466c700-1c42-11e9-80f4-7cc834ff6486.png)
+
+- Expected Log-Likelihood is negative cross-entropy between original data and recontructed data.
+- "Expected Log-Likelihood encourages the decoder to learn to reconstruct the data. If the decoder’s output does not reconstruct the data well, it will incur a large cost in this loss function".
+- If the input and output have Bernoulli distribution, Expected Log-Likelihood can be calculated like this:
+
+![exp1](https://user-images.githubusercontent.com/10358317/51432952-aa80b080-1c51-11e9-9272-391ea26031c4.png)
+
+- "KL divergence measures how much information is lost (in units of nats) when using q to represent p. It is one measure of how close q is to p".
+- KL divergence provides to compare 2 probability distributions.
+- If the two probability distributions are exactly same  (q=p), KL divergence equals to 0. 
+- If the two probability distributions are not same  (q!=p), KL divergence > 0 . 
+
+![kl_div1](https://user-images.githubusercontent.com/10358317/51432822-3c3aee80-1c4f-11e9-8454-fe37a9483cad.png)
+
+- Cost function consists of two part: How the model's output is close to target and regularization.
+- COST = (TARGET-OUTPUT) PENALTY-REGULARIZATION PENALTY == RECONSTRUCTION PENALTY - REGULARIZATION PENALTY
 
 
 ## Generative Adversial Networks (GANs)
@@ -185,7 +204,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![pixelgan](https://user-images.githubusercontent.com/10358317/51417512-6e851700-1b8f-11e9-8557-003e9c4e9ec5.png)
 
-### PoseGuided
+### PoseGuided 
 [Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
 
 ![poseguided](https://user-images.githubusercontent.com/10358317/51417513-6e851700-1b8f-11e9-90b8-314377157b6f.png)
