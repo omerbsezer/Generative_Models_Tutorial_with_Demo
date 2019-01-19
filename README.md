@@ -57,6 +57,8 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - **Prior Distribution**: "often simply called the prior, of an uncertain quantity is the probability distribution that would express one's beliefs about this quantity before some evidence is taken into account." (e.g. p(z)) 
 - **Posterior Distribution:** is a probability distribution that represents your updated beliefs about the parameter after having seen the data. (e.g. p(z|x))
 - **Posterior probability = prior probability + new evidence (called likelihood)**
+- **Probability Density Function (PDF)**: the set of possible values taken by the random variable
+- **Gaussian (Normal) Distribution**: A symmetrical data distribution, where most of the results lie near the mean.
 - **Bayesian Analysis**:
   - Prior distribution: p(z)
   - Gather data
@@ -97,7 +99,6 @@ Generative models are interesting topic in ML. Generative models are a subset of
 <img src="https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png">[Udemy GAN-VAE]
 </p>
 
-
 ### Expectation-Maximization (EM)
 - GMM is trained using Expectation-Maximization (EM)
 - EM is iterative algorithm that let the likelihood improves at each step.
@@ -105,6 +106,13 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ## AutoEncoders
 - A neural network that predicts (reconstructs) its own input.
+- It is a feed forward network.
+- W: weight, b:bias, x:input, f() and g():activation functions, z: latent variable, x_hat= output (reconstructed input)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/10358317/51426045-ed149f80-1bf5-11e9-8d7f-5185e60139c5.png">
+</p>
+
 - Instead of fit(X,Y) like neural networks, autoencoders fit(X,X).
 - It has 1 input, 1 hidden, 1 output layers (hidden layer size < input layer size; input layer size = output layer size)
 - It forces neural network to learn compact/efficient representation (e.g. dimension reduction/ compression)
@@ -113,7 +121,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 <img src="https://user-images.githubusercontent.com/10358317/51418718-2c130880-1b96-11e9-9e2c-41fcd15da4b0.png">[Udemy GAN-VAE]
 </p>
 
-## Variational AutoEncoder (VAE)
+## Variational Inference (VI)
 - Variational inference (VI) is the significant component of Variational AutoEncoders.
 - VI ~ Bayesian extension of EM.
 - In GMM/K-Means Clustering, you have choose the number of clusters.
@@ -121,6 +129,13 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![variational-inference](https://user-images.githubusercontent.com/10358317/51386321-128ca500-1b33-11e9-8367-ea8c73e305c1.png)
 [Udemy GAN-VAE]
+
+## Variational AutoEncoder (VAE)
+- It is combination of autoencoders and variational inference. 
+- It doesn't work like tradional autoencoders. 
+- Its output is the parameters of a distribution: mean and variance, which represent a Gaussian-PDF of Z  (instead only one value)
+
+![vae1](https://user-images.githubusercontent.com/10358317/51426260-f0f5f100-1bf8-11e9-98e5-b8bbf4e3cf22.png) [Udemy GAN-VAE]
 
 ![vae_learning](https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif) [Blog Open-AI]
 
