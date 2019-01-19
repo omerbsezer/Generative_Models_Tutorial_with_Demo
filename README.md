@@ -131,17 +131,28 @@ Generative models are interesting topic in ML. Generative models are a subset of
 [Udemy GAN-VAE]
 
 ## Variational AutoEncoder (VAE)
-- It is combination of autoencoders and variational inference. 
+- VAE is a neural network that learns to generate its input.
+- It can map data to latent space, then generate samples using latent space.
+- VAE is combination of autoencoders and variational inference. 
 - It doesn't work like tradional autoencoders. 
 - Its output is the parameters of a distribution: mean and variance, which represent a Gaussian-PDF of Z  (instead only one value)
+- VAE consists of two units: Encoder, Decoder. 
+- The output of encoder represents Gaussian distributions.(e.g. In 2-D Gaussian, encoder gives 2 mean and 2 variance/stddev)
+- The output of decoder represents Bernoulli distributions.
+- From a probability distribution, new samples can be generated.
 
 ![vae1](https://user-images.githubusercontent.com/10358317/51426260-f0f5f100-1bf8-11e9-98e5-b8bbf4e3cf22.png) [Udemy GAN-VAE]
 
-![vae_learning](https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif) [Blog Open-AI]
+### Latent Space
+- Encoder: x-> q(z) {q(z): latent space, coded version of x}
+- Decoder: q(z)~z -> x_hat
+
+![latent_space](https://user-images.githubusercontent.com/10358317/51431824-861bd880-1c3f-11e9-8951-ecf9ce3f08a7.png)
+
 
 ### Bayesian:
 
-## Generative Adversial Networks (GANs):
+## Generative Adversial Networks (GANs)
 - There are 2 different networks: generator and discriminator, compete against each other.
 - GANs are interesting because it generates samples exceptionally good.
 
