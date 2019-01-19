@@ -140,17 +140,27 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - The output of encoder represents Gaussian distributions.(e.g. In 2-D Gaussian, encoder gives 2 mean and 2 variance/stddev)
 - The output of decoder represents Bernoulli distributions.
 - From a probability distribution, new samples can be generated.
+- For example: let's say input x is a 28 by 28-pixel photo
+- The encoder ‘encodes’ the data which is 784-dimensional into a latent (hidden) representation space z.
+- The encoder outputs parameters to q(z∣x), which is a Gaussian probability density.
+- The decoder gets as input the latent representation of a digit z and outputs 784 Bernoulli parameters, one for each of the 784 pixels in the image. 
+- The decoder ‘decodes’ the real-valued numbers in z into 784 real-valued numbers between 0 and 1.
 
 ![vae1](https://user-images.githubusercontent.com/10358317/51426260-f0f5f100-1bf8-11e9-98e5-b8bbf4e3cf22.png) [Udemy GAN-VAE]
 
 ### Latent Space
 - Encoder: x-> q(z) {q(z): latent space, coded version of x}
 - Decoder: q(z)~z -> x_hat
+- Encoder takes the input of image "8" and gives output q(z|x).
+- Sample from q(z|x) to get z
+- Get p(x_hat|x), sample from it (this is called posterior predictive sample)
 
 ![latent_space](https://user-images.githubusercontent.com/10358317/51431824-861bd880-1c3f-11e9-8951-ecf9ce3f08a7.png)
 
 
-### Bayesian:
+### Cost Function of VAE
+- Evidence Lower Bound (ELBO) is our objective function that has to be maximized.
+
 
 ## Generative Adversial Networks (GANs)
 - There are 2 different networks: generator and discriminator, compete against each other.
@@ -298,6 +308,7 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - [PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
 - [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 - [GAN Applications](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900)
+- https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
 
 ## Notes
 - [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
