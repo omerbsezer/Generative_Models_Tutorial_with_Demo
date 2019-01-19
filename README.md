@@ -48,7 +48,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - Generative models are mostly used to generate images (vision area). In the recent studies, it will also used to generate sentences (natural language processing area). 
 - It can be said that Generative models begins with sampling. Generative models are told in this tutorial according to the development steps of generative models: Sampling, Gaussian Mixture Models, Variational AutoEncoder, Generative Adversial Networks.   
 
-## Preliminary (Recall):
+## Preliminary (Recall)
 - **Bayesian Rule**: p(z|x)= p(x|z) p(z) /p(x)
 - **Prior Distribution**: "often simply called the prior, of an uncertain quantity is the probability distribution that would express one's beliefs about this quantity before some evidence is taken into account." (e.g. p(z)) 
 - **Posterior Distribution:** is a probability distribution that represents your updated beliefs about the parameter after having seen the data. (e.g. p(z|x))
@@ -58,8 +58,11 @@ Generative models are interesting topic in ML. Generative models are a subset of
   - Gather data
   - "Update your prior distribution with the data using Bayes' theorem to obtain a posterior distribution."
   - "Analyze the posterior distribution and summarize it (mean, median, etc.)"
+- It is expected that you have knowledge of neural network concept (gradient descent, cost function, activation functions, regression, classification)
+  - Typically used for regression or classification
+  - Basically: fit(X,Y) and predict(X)
 
-## Sampling from Bayesian Classifier:
+## Sampling from Bayesian Classifier
 - We use sampling data to generate new samples (using distribution of the training data).
 - If we know the probability distribution of the training data , we can sample from it.
 - Two ways of sampling:
@@ -72,14 +75,14 @@ Generative models are interesting topic in ML. Generative models are a subset of
     - If p(y) and p(x|y) are known and y has its own distribution (e.g. categorical or discrete distribution)
     - Sample 
 
-## Unsupervised Deep Learning vs Supervised Deep Learning (Recall):
+## Unsupervised Deep Learning vs Supervised Deep Learning (Recall)
 - **Unsupervised Deep Learning**: trying to learn structure of inputs 
   - **Example1**: If the structure of poetry/text can be learned, it is possible to generate text/poetry that resembles the given text/poetry.
   - **Example2**: If the structure of art can be learned, it is possible to make new art/drawings that resembles the given art/drawings.
   - **Example3**: If the structure of music can be learned, it is possible to create new music that resembles the given music.
 - **Supervised Deep Learning**: trying to map inputs to targets
 
-## Gaussian Mixture Model (GMM):
+## Gaussian Mixture Model (GMM)
 - Single gaussian model learns blurry images if there are more than one gaussian distribution (e.g. different types of writing digits in handwriting).
 - To get best result, GMM have to used to model more than one gaussian distribution.
 - GMM is latent variable model. With GMM, multi-modal distribution can be modelled at the same time.
@@ -88,14 +91,20 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![gmm](https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png) [Udemy GAN-VAE]
 
-### Expectation-Maximization (EM):
+### Expectation-Maximization (EM)
 - GMM is trained using Expectation-Maximization (EM)
 - EM is iterative algorithm that let the likelihood improves at each step.
 - The aim of EM is to reach maximum likelihood.
 
+## AutoEncoders
+- A neural network that predicts (reconstructs) its own input.
+- Instead of fit(X,Y) like neural networks, autoencoders fit(X,X).
+- It has 1 input, 1 hidden, 1 output layers (hidden layer size < input layer size; input layer size = output layer size)
+- It forces neural network to learn compact/efficient representation (e.g. dimension reduction/ compression)
 
-## Variational AutoEncoder (VAE):
+![autoencoders](https://user-images.githubusercontent.com/10358317/51418718-2c130880-1b96-11e9-9e2c-41fcd15da4b0.png) [Udemy GAN-VAE]
 
+## Variational AutoEncoder (VAE)
 - Variational inference (VI) is the significant component of Variational AutoEncoders.
 - VI ~ Bayesian extension of EM.
 - In GMM/K-Means Clustering, you have choose the number of clusters.
@@ -105,9 +114,6 @@ Generative models are interesting topic in ML. Generative models are a subset of
 [Udemy GAN-VAE]
 
 ![vae_learning](https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif) [Blog Open-AI]
-
-
-### AutoEncoder:
 
 ### Bayesian:
 
@@ -215,13 +221,13 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 ![running_human](https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif) [Blog Open-AI]
 
 
-## Auto-Regressive Models:
+## Auto-Regressive Models
 
 ### PixelRNN
 
 ### PixelCNN
 
-## Important Papers:
+## Important Papers
 - Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
 - Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
 - Ledig et al., [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf), 
@@ -248,14 +254,16 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - Li et al., [Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
 
 
-## Courses: 
+## Courses
 - [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
+- [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 
-## References:
+## References
 - [Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
 - [PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
 - [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
+- [GAN Applications](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900)
 
-## Notes:
+## Notes
 - [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
 - PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
