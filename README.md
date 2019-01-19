@@ -1,6 +1,10 @@
 # Generative Models Tutorial
 Generative models are interesting topic in ML. Generative models are a subset of unsupervised learning that generate new sample/data by using given some training data. There are different types of ways of modelling same distribution of training data: Auto-Regressive models, Auto-Encoders and GANs. In this tutorial, we are focusing theory of generative models, demonstration of generative models, important papers, courses related generative models. It will continue to be updated over time.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif">[Blog Open-AI]
+</p>
+
 **Keywords:**  Generative Models, Variational Auto Encoders (VAE), Generative Adversial Networks (GAN), VAE/GAN papers, courses, etc..
 
 **NOTE: This tutorial is only for education purpose. It is not academic study/paper. All related references are listed at the end of the file.**
@@ -89,7 +93,10 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - Multiple gaussians in different proportions are fitted into the GMM. 
 - 2 clusters: p(x)=p(z=1) p(x|z=1) + p(z=2) p(x|z=2). In figure, there are 2 different proportions gaussian distributions.
 
-![gmm](https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png) [Udemy GAN-VAE]
+<p align="center">
+<img src="https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png">[Udemy GAN-VAE]
+</p>
+
 
 ### Expectation-Maximization (EM)
 - GMM is trained using Expectation-Maximization (EM)
@@ -102,7 +109,9 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - It has 1 input, 1 hidden, 1 output layers (hidden layer size < input layer size; input layer size = output layer size)
 - It forces neural network to learn compact/efficient representation (e.g. dimension reduction/ compression)
 
-![autoencoders](https://user-images.githubusercontent.com/10358317/51418718-2c130880-1b96-11e9-9e2c-41fcd15da4b0.png) [Udemy GAN-VAE]
+<p align="center">
+<img src="https://user-images.githubusercontent.com/10358317/51418718-2c130880-1b96-11e9-9e2c-41fcd15da4b0.png">[Udemy GAN-VAE]
+</p>
 
 ## Variational AutoEncoder (VAE)
 - Variational inference (VI) is the significant component of Variational AutoEncoders.
