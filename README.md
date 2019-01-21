@@ -5,7 +5,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 <img src="https://user-images.githubusercontent.com/10358317/51377315-a81c3a80-1b1b-11e9-8298-7e61e6cfe329.gif">[Blog Open-AI]
 </p>
 
-**Keywords:**  Generative Models, Variational Auto Encoders (VAE), Generative Adversial Networks (GAN), VAE/GAN papers, courses, etc..
+**Keywords:** Bayesian Classifier Sampling, Variational Auto Encoder (VAE), Generative Adversial Networks (GANs), Popular GANs Architectures, Auto-Regressive Models, Important Generative Model Papers, Courses, etc.. 
 
 **NOTE: This tutorial is only for education purpose. It is not academic study/paper. All related references are listed at the end of the file.**
 
