@@ -263,14 +263,17 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 - Estimate of the expected value over all possible data
 - Discrimator Cost Function:
+
 ![gan_cost2](https://user-images.githubusercontent.com/10358317/51477223-ccd11600-1d98-11e9-8665-03a52a971844.png)
 
 #### Generator Cost Function <a name="GeneratorCost"></a>
 - Relation between Generator and Discriminator Cost Functions:
+
 ![gen-disc](https://user-images.githubusercontent.com/10358317/51477360-4e28a880-1d99-11e9-88d4-2411c177b7ea.png)
 
 - In game theory, this situation is called "zero-sum game". Sum of all players in the game is 0.
 - Theta_G: parameters of generator;  Theta_D: parameters of discriminator
+
 ![gen-disc2](https://user-images.githubusercontent.com/10358317/51477622-10784f80-1d9a-11e9-8afe-24d9a5f7bca0.png)
 
 - Pseudocode of GANs:
