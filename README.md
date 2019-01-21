@@ -10,6 +10,48 @@ Generative models are interesting topic in ML. Generative models are a subset of
 **NOTE: This tutorial is only for education purpose. It is not academic study/paper. All related references are listed at the end of the file.**
 
 # Table Of Content
+- [What is Generative Models?](#whatisGM)
+- [Preliminary (Recall)](#Preliminary)
+- [Sampling from Bayesian Classifier](#BayesianClassifier)
+- [Unsupervised Deep Learning vs Supervised Deep Learning (Recall)](#UDLvsSDL)
+- [Gaussian Mixture Model (GMM)](#GMM)
+  - [Expectation-Maximization (EM)](#EM)
+- [AutoEncoders](#AutoEncoders)
+- [Variational Inference (VI)](#VI)
+- [Variational AutoEncoder (VAE)](#VAE)
+  - [Latent Space](#LatentSpace)
+  - [Cost Function of VAE](#CostFunctionofVAE)
+- [Generative Adversial Networks (GANs)](#GANs)
+  - [GANs Cost Function](#GANsCostFunction)
+  - [DCGAN](#DCGAN)
+    - [Fractionally-Strided Convolution](#FractionallyStridedConvolution)
+  - [CycleGAN](#CycleGAN)
+  - [Pix2Pix](#Pix2Pix)
+  - [PixelDTGAN](#PixelDTGAN)
+  - [PoseGuided](#PoseGuided)
+  - [SRGAN](#SRGAN)
+  - [StackGAN](#StackGAN)
+  - [TPGAN](#TPGAN)
+  - [Anime Generation](#AnimeGeneration)
+  - [3DGAN](#3DGAN)
+  - [Age-cGAN](#AgecGAN)
+  - [AnoGAN](#AnoGAN)
+  - [DiscoGAN](#DiscoGAN)
+  - [DTN](#DTN)
+  - [IcGAN](#IcGAN)
+  - [MGAN](#MGAN)
+  - [MidiNet](#MidiNet)
+  - [PerceptualGAN](#PerceptualGAN)
+- [Auto-Regressive Models](#AutoRegressiveModels)
+  - [PixelRNN](#PixelRNN)
+  - [PixelCNN](#PixelCNN)
+  - [PixelCNN++](#PixelCNNPlus)
+- [Generative Model in Reinforcement Learning](#GenerativeModelInRL)
+  - [Generative Adversarial Imitation Learning](#GenerativeAdversarialImitation)
+- [Important Papers](#ImportantPapers)
+- [Courses](#Courses)
+- [References](#References)
+- [Notes](#Notes)
 
 ## What is Generative Models? <a name="whatisGM"></a>
 - Generative models are a subset of unsupervised learning that generate new sample/data by using given some training data (from same distribution). In our daily life, there are huge data generated from electronic devices, computers, cameras, iot, etc. (e.g. millions of images, sentences, or sounds, etc.) 
@@ -52,7 +94,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - Generative models are mostly used to generate images (vision area). In the recent studies, it will also used to generate sentences (natural language processing area). 
 - It can be said that Generative models begins with sampling. Generative models are told in this tutorial according to the development steps of generative models: Sampling, Gaussian Mixture Models, Variational AutoEncoder, Generative Adversial Networks.   
 
-## Preliminary (Recall)
+## Preliminary (Recall) <a name="Preliminary"></a>
 - **Bayesian Rule**: p(z|x)= p(x|z) p(z) /p(x)
 - **Prior Distribution**: "often simply called the prior, of an uncertain quantity is the probability distribution that would express one's beliefs about this quantity before some evidence is taken into account." (e.g. p(z)) 
 - **Posterior Distribution:** is a probability distribution that represents your updated beliefs about the parameter after having seen the data. (e.g. p(z|x))
@@ -68,7 +110,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
   - Typically used for regression or classification
   - Basically: fit(X,Y) and predict(X)
 
-## Sampling from Bayesian Classifier
+## Sampling from Bayesian Classifier <a name="BayesianClassifier"></a>
 - We use sampling data to generate new samples (using distribution of the training data).
 - If we know the probability distribution of the training data , we can sample from it.
 - Two ways of sampling:
@@ -81,14 +123,14 @@ Generative models are interesting topic in ML. Generative models are a subset of
     - If p(y) and p(x|y) are known and y has its own distribution (e.g. categorical or discrete distribution)
     - Sample 
 
-## Unsupervised Deep Learning vs Supervised Deep Learning (Recall)
+## Unsupervised Deep Learning vs Supervised Deep Learning (Recall) <a name="UDLvsSDL"></a>
 - **Unsupervised Deep Learning**: trying to learn structure of inputs 
   - **Example1**: If the structure of poetry/text can be learned, it is possible to generate text/poetry that resembles the given text/poetry.
   - **Example2**: If the structure of art can be learned, it is possible to make new art/drawings that resembles the given art/drawings.
   - **Example3**: If the structure of music can be learned, it is possible to create new music that resembles the given music.
 - **Supervised Deep Learning**: trying to map inputs to targets
 
-## Gaussian Mixture Model (GMM)
+## Gaussian Mixture Model (GMM) <a name="GMM"></a>
 - Single gaussian model learns blurry images if there are more than one gaussian distribution (e.g. different types of writing digits in handwriting).
 - To get best result, GMM have to used to model more than one gaussian distribution.
 - GMM is latent variable model. With GMM, multi-modal distribution can be modelled at the same time.
@@ -99,12 +141,12 @@ Generative models are interesting topic in ML. Generative models are a subset of
 <img src="https://user-images.githubusercontent.com/10358317/51385984-e9b7e000-1b31-11e9-8d7e-df4f3dc72d4f.png">[Udemy GAN-VAE]
 </p>
 
-### Expectation-Maximization (EM)
+### Expectation-Maximization (EM) <a name="EM"></a>
 - GMM is trained using Expectation-Maximization (EM)
 - EM is iterative algorithm that let the likelihood improves at each step.
 - The aim of EM is to reach maximum likelihood.
 
-## AutoEncoders
+## AutoEncoders <a name="AutoEncoders"></a>
 - A neural network that predicts (reconstructs) its own input.
 - It is a feed forward network.
 - W: weight, b:bias, x:input, f() and g():activation functions, z: latent variable, x_hat= output (reconstructed input)
@@ -121,7 +163,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 <img src="https://user-images.githubusercontent.com/10358317/51418718-2c130880-1b96-11e9-9e2c-41fcd15da4b0.png">[Udemy GAN-VAE]
 </p>
 
-## Variational Inference (VI)
+## Variational Inference (VI) <a name="VI"></a>
 - Variational inference (VI) is the significant component of Variational AutoEncoders.
 - VI ~ Bayesian extension of EM.
 - In GMM/K-Means Clustering, you have choose the number of clusters.
@@ -130,7 +172,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 ![variational-inference](https://user-images.githubusercontent.com/10358317/51386321-128ca500-1b33-11e9-8367-ea8c73e305c1.png)
 [Udemy GAN-VAE]
 
-## Variational AutoEncoder (VAE)
+## Variational AutoEncoder (VAE) <a name="VAE"></a>
 - VAE is a neural network that learns to generate its input.
 - It can map data to latent space, then generate samples using latent space.
 - VAE is combination of autoencoders and variational inference. 
@@ -148,7 +190,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![vae1](https://user-images.githubusercontent.com/10358317/51426260-f0f5f100-1bf8-11e9-98e5-b8bbf4e3cf22.png) [Udemy GAN-VAE]
 
-### Latent Space
+### Latent Space <a name="LatentSpace"></a>
 - Encoder: x-> q(z) {q(z): latent space, coded version of x}
 - Decoder: q(z)~z -> x_hat
 - Encoder takes the input of image "8" and gives output q(z|x).
@@ -158,7 +200,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 ![latent_space](https://user-images.githubusercontent.com/10358317/51431824-861bd880-1c3f-11e9-8951-ecf9ce3f08a7.png)
 
 
-### Cost Function of VAE
+### Cost Function of VAE <a name="CostFunctionofVAE"></a>
 - Evidence Lower Bound (ELBO) is our objective function that has to be maximized.
 - ELBO consists of two terms: Expected Log-Likelihood of the data and KL divergence between q(z|x) and p(z). 
 
@@ -181,7 +223,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - COST = (TARGET-OUTPUT) PENALTY-REGULARIZATION PENALTY == RECONSTRUCTION PENALTY - REGULARIZATION PENALTY
 
 
-## Generative Adversial Networks (GANs)
+## Generative Adversial Networks (GANs) <a name="GANs"></a>
 - GANs are interesting because it generates samples exceptionally good.
 - GANs are used in different applications (details are summarized following sections).
 - GANs are different form other generative models (Bayesian Classifier, Variational Autoencoders, Restricted Boltzmann Machines). GANs are not dealing with explicit probabilities, instead, its aim is to reach Nash Equilibrium of a game.
@@ -194,7 +236,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 <img src="https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif">[Blog Open-AI]
 </p>
 
-### GANs Cost Function
+### GANs Cost Function <a name="GANsCostFunction"></a>
 - Generator and Discriminator try to optimize the opposite cost functions.
 - Discriminator classifies images as a real or fake images with binary classification. 
 - t: target; y: output probability of the discriminator.
@@ -207,11 +249,11 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![discriminator](https://user-images.githubusercontent.com/10358317/51464920-b8c8ec80-1d77-11e9-894b-74bf5c8ecde8.png)
 
-### DCGAN
+### DCGAN <a name="DCGAN"></a>
 
-#### Fractionally-Strided Convolution
+#### Fractionally-Strided Convolution <a name="FractionallyStridedConvolution"></a>
 
-### CycleGAN
+### CycleGAN <a name="CycleGAN"></a>
 - [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
 - Their algorithm translate an image from one to another: 
   - Transfer from Monet paintings to landscape photos from Flickr, and vice versa.
@@ -220,13 +262,13 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![cyclegan](https://user-images.githubusercontent.com/10358317/51417525-704eda80-1b8f-11e9-93ce-2d3c14a3aee1.jpeg)
 
-### Pix2Pix
+### Pix2Pix <a name="Pix2Pix"></a>
 - [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
 - Pix2Pix is an image-to-image translation algorithm: aerials to map, labels to street scene, labels to facade, day to night, edges to photo.
 
 ![pix2pix](https://user-images.githubusercontent.com/10358317/51417511-6e851700-1b8f-11e9-84ed-64cfb0cd6e58.png)
 
-### PixelDTGAN
+### PixelDTGAN <a name="PixelDTGAN"></a> 
 - [Pixel-Level Domain Transfer](https://arxiv.org/pdf/1603.07442.pdf)
 - PixelDTGAN generates clothing images from an image.
 - "The  model  transfers  an  input  domain  to  a  target  domain  in  semantic level, and generates the target image in pixel level."
@@ -234,80 +276,80 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ![pixelgan](https://user-images.githubusercontent.com/10358317/51417512-6e851700-1b8f-11e9-8557-003e9c4e9ec5.png)
 
-### PoseGuided 
+### PoseGuided <a name="PoseGuided"></a> 
 - [Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
 - "This paper proposes the novel Pose Guided Person Generation Network (PG2 that allows to synthesize person images in arbitrary poses, based on an image of that person and a novel pose"
 
 ![poseguided](https://user-images.githubusercontent.com/10358317/51417513-6e851700-1b8f-11e9-90b8-314377157b6f.png)
 
-### SRGAN
+### SRGAN <a name="SRGAN"></a>
 - [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf)
 - SRGAN: "a generative adversarial network (GAN) for image super-resolution (SR)"
 - They generate super-resolution images from the lower resolution images.
 
 ![srgan](https://user-images.githubusercontent.com/10358317/51417515-6f1dad80-1b8f-11e9-9312-ee6f02e6f4f5.png)
 
-### StackGAN
+### StackGAN <a name="StackGAN"></a>
 - [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1612.03242v1.pdf)
 - Stacked Generative Adversarial Networks (Stack-GAN):  "to  generate  photo-realistic  images  conditioned  on text descriptions".
 - Input: sentence, Output: multiple images fitting the description.
 
 ![stackgan](https://user-images.githubusercontent.com/10358317/51417516-6f1dad80-1b8f-11e9-9309-d44ca62983c7.png)
 
-### TPGAN
+### TPGAN <a name="TPGAN"></a>
 - [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
 - "Synthesis faces in different poses: With a single input image, they create faces in different viewing angles."
 
 ![tp-gan](https://user-images.githubusercontent.com/10358317/51417517-6f1dad80-1b8f-11e9-89ea-09fdaa77d794.png)
 
-### Anime Generation
+### Anime Generation <a name="AnimeGeneration"></a>
 - [Towards the Automatic Anime Characters Creation with Generative Adversarial Networks](https://arxiv.org/pdf/1708.05509.pdf)
 - "They explore the training of GAN models specialized on an anime facial image dataset."
 - They build website for their implementation (https://make.girls.moe)
 
 ![animegeneration](https://user-images.githubusercontent.com/10358317/51417518-6fb64400-1b8f-11e9-8205-58d408e3556c.png)
 
-### 3DGAN
+### 3DGAN <a name="3DGAN"></a>
 - [Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
 - This paper proposed creating 3D objects with GAN.
 - "They demonstrated that their models are able to generate novel objects and to reconstruct 3D objects from images"
 
 ![3dgan](https://user-images.githubusercontent.com/10358317/51417520-6fb64400-1b8f-11e9-8f09-806b6636a13b.png)
 
-### Age-cGAN
+### Age-cGAN <a name="AgecGAN"></a>
 - [FACE AGING WITH CONDITIONAL GENERATIVE ADVERSARIAL NETWORKS](https://arxiv.org/pdf/1702.01983.pdf)
 - They proposed the GAN-based method for automatic face aging.
 
 ![age-cgan](https://user-images.githubusercontent.com/10358317/51417523-6fb64400-1b8f-11e9-8e7b-80fe044a6586.png)
 
-### AnoGAN
+### AnoGAN <a name="AnoGAN"></a>
 - [Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery](https://arxiv.org/pdf/1703.05921.pdf)
 - "A deep convolutional generative adversarial network to learn a manifold of normal anatomical variability".
 
 ![anogan](https://user-images.githubusercontent.com/10358317/51417524-704eda80-1b8f-11e9-914c-79ed3c528c21.png)
 
-### DiscoGAN
+### DiscoGAN <a name="DiscoGAN"></a>
 - [Learning to Discover Cross-Domain Relations with Generative Adversarial Networks](https://arxiv.org/pdf/1703.05192.pdf)
 - Proposed method transfers style from one domain to another (e.g handbag -> shoes)
 - "DiscoGAN learns cross domain relationship without labels or pairing". 
 
 ![discogan](https://user-images.githubusercontent.com/10358317/51417526-70e77100-1b8f-11e9-8e2d-d25891a02ff3.png)
 
-### DTN
+### DTN <a name="DTN"></a>
 - [Unsupervised Cross-Domain Image Generation](https://arxiv.org/pdf/1611.02200.pdf)
 - Proposed method is to create emoji from pictures.
 - "They can synthesize an SVHN image that resembles a given MNIST image, or synthesize a face that matches an emoji." 
 
 ![dtn](https://user-images.githubusercontent.com/10358317/51417527-70e77100-1b8f-11e9-8e0b-9cc45fa2d632.png)
 
-### IcGAN
+### IcGAN <a name="IcGAN"></a>
 - [Invertible Conditional GANs for image editing](https://arxiv.org/pdf/1611.06355.pdf)
 - "They evaluate encoders to inverse the mapping of a cGAN, i.e., mapping a real image into a latent space and a conditional representation".
 - Proposed method is to reconstruct or edit images with specific attribute.
 
 ![icgan](https://user-images.githubusercontent.com/10358317/51417528-70e77100-1b8f-11e9-94d9-3f0c91cf123a.png)
 
-### MGAN
+### MGAN <a name="MGAN"></a>
 - [Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks](https://arxiv.org/pdf/1604.04382.pdf)
 - "Markovian Generative Adversarial Networks (MGANs), a method for training generative neural networks for
 efficient texture synthesis."
@@ -315,27 +357,27 @@ efficient texture synthesis."
 
 ![mgan](https://user-images.githubusercontent.com/10358317/51417529-71800780-1b8f-11e9-9834-a4812af4518f.png)
 
-### MidiNet
+### MidiNet <a name="MidiNet"></a>
 - [MIDINET: A CONVOLUTIONAL GENERATIVE ADVERSARIAL NETWORK FOR SYMBOLIC-DOMAIN MUSIC GENERATION](https://arxiv.org/pdf/1703.10847.pdf)
 - "They propose a novel conditional mechanism to exploit available prior knowledge, so that the model can generate melodies either from scratch,  by following a chord sequence, or by conditioning on the melody of previous bars" 
 - "MidiNet can be expanded to generate music with multiple MIDI channels" 
 
 ![midinet](https://user-images.githubusercontent.com/10358317/51417530-71800780-1b8f-11e9-801b-896122c13614.png)
 
-### PerceptualGAN
+### PerceptualGAN <a name="PerceptualGAN"></a>
 - [Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
 - "Proposed method improves small object detection  through  narrowing  representation  difference  of small objects from the large ones"
 
 ![perceptualgan](https://user-images.githubusercontent.com/10358317/51417531-71800780-1b8f-11e9-8df1-0bb1befe4d9c.png)
 
-## Auto-Regressive Models
+## Auto-Regressive Models <a name="AutoRegressiveModels"></a>
 - "The basic difference between Generative Adversarial Networks (GANs) and Auto-regressive models is that GANs learn implicit data distribution whereas the latter learns an explicit distribution governed by a prior imposed by model structure" [Sharma]. 
 - Some of the advantages of Auto-Regressive Models over GANs:
   - **Provides a way to calculate likelihood**: They have advantage of returning explicit probability densities. Hence it can be applied in the application areas related compression and probabilistic planning and exploration.
   - **The training is more stable than GANs**:"Training a GAN requires finding the Nash equilibrium". Training of PixelRNN, PixelCNN are more stable than GANs. 
   - **It works for both discrete and continuous data**:"It’s hard to learn to generate discrete data for GAN, like text" [Sharma]. 
 
-### PixelRNN
+### PixelRNN <a name="PixelRNN"></a>
 Paper: Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601.06759.pdf) (proposed from Google DeepMind)
 - It is used for image completion applications.
 - "It uses probabilistic density models (like Gaussian or Normal distribution) to quantify the pixels of an image as a product of conditional distributions."
@@ -349,13 +391,13 @@ Paper: Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601
 
 ![pixelrnn](https://user-images.githubusercontent.com/10358317/51472966-16673400-1d8c-11e9-8974-741247a4b2a8.png)
 
-### PixelCNN
+### PixelCNN <a name="PixelCNN"></a>
 - Papers: Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601.06759.pdf); Oord et al., [Conditional Image Generation with PixelCNN Decoders](https://arxiv.org/pdf/1606.05328.pdf) (proposed from Google DeepMind).
 - "The main drawback of PixelRNN is that training is very slow as each state needs to be computed sequentially. This can be overcome by using convolutional layers and increasing the receptive field."
 - "PixelCNN lowers the training time considerably as compared to PixelRNN."
 - "The major drawback of PixelCNN is that it’s performance is worse than PixelRNN. Another drawback is the presence of a Blind Spot in the receptive field"
 
-### PixelCNN++
+### PixelCNN++ <a name="PixelCNNPlus"></a>
 - Paper: Salimans et al.,[PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf)
 - PixelCNN++ improves the performance of PixelCNN (proposed from OpenAI)
 - Modifications:
@@ -368,19 +410,19 @@ Paper: Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601
 - Details are in the paper [PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf).
 
 
-## Generative Model in Reinforcement Learning:
+## Generative Model in Reinforcement Learning <a name="GenerativeModelInRL"></a>
 
-### Generative Adversarial Imitation Learning:
-Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
+### Generative Adversarial Imitation Learning <a name="GenerativeAdversarialImitation"></a>
+Paper: Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476) 
+- "The standard reinforcement learning setting usually requires one to design a reward function that describes the desired behavior of the agent. However, in practice this can sometimes involve expensive trial-and-error process to get the details right. In contrast, in imitation learning the agent learns from example demonstrations (for example provided by teleoperation in robotics), eliminating the need to design a reward function. This approach can be used to learn policies from expert demonstrations (without rewards) on hard OpenAI Gym environments, such as Ant and Humanoid." [Blog Open-AI]. 
+- "Popular imitation approaches involve a two-stage pipeline: first learning a reward function, then running RL on that reward. Such a pipeline can be slow, and because it’s indirect, it is hard to guarantee that the resulting policy works well. This work shows how one can directly extract policies from data via a connection to GANs" [Blog Open-AI].
 
-"The standard reinforcement learning setting usually requires one to design a reward function that describes the desired behavior of the agent. However, in practice this can sometimes involve expensive trial-and-error process to get the details right. In contrast, in imitation learning the agent learns from example demonstrations (for example provided by teleoperation in robotics), eliminating the need to design a reward function. This approach can be used to learn policies from expert demonstrations (without rewards) on hard OpenAI Gym environments, such as Ant and Humanoid." [Blog Open-AI]. 
-
-![running_human](https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif) [Blog Open-AI]
-
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif">[Blog Open-AI]
+</p>
 
 
-## Important Papers
+## Important Papers <a name="ImportantPapers"></a>
 - Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
 - Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
 - Ledig et al., [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf), 
@@ -409,17 +451,16 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - Oord et al., [Conditional Image Generation with PixelCNN Decoders](https://arxiv.org/pdf/1606.05328.pdf)
 - Salimans et al.,[PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf)
 
-## Courses
+## Courses <a name="Courses"></a>
 - [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
 - [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 
-## References
+## References <a name="References"></a>
 - [Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
 - [Sharma, PixelRNN/PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
 - [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 - [GAN Applications](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900)
 - https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
 
-## Notes
+## Notes <a name="Notes"></a>
 - [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
-- PixelRNN, PixelCNN: https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173
