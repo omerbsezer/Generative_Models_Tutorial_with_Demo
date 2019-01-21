@@ -233,6 +233,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - There are 2 different networks in GANs: generator and discriminator, compete against each other.
   - Generator Network tries to fool the discriminator.
   - Disciminator Network tries not to be fooled.
+- Paper: Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif">[Blog Open-AI]
@@ -286,8 +287,21 @@ Generative models are interesting topic in ML. Generative models are a subset of
 ![pseudocode_gan](https://user-images.githubusercontent.com/10358317/51477848-b5932800-1d9a-11e9-8015-edddd7c43f46.png)
 
 ### DCGAN <a name="DCGAN"></a>
+- Paper: Radford, A., Metz, L., and Chintala, S., [Unsupervised representation learning with deep convolutional generative adversarial networks](https://arxiv.org/abs/1511.06434v2)
+- DCGAN architecture produces high quality and high resolution images in a single pass.
+- DCGANs contain batch normalization.
+- DCGANs also contain only all-convolutional layers instead of contaning convolution, pooling, linear layers together.
+- It optimizes using ADAM optimizer (adaptive gradient desdent algorithm)
+- Discriminator uses Leaky-ReLU (Rectified Linear Unit), generator uses normal ReLU.
+
+![dcgan](https://user-images.githubusercontent.com/10358317/51480436-1c680f80-1da2-11e9-920c-676b5a9a100f.png)
+
+- Typical Convolution: input size is bigger or equal than output size (Stride>1).
+- Deconvolution: input size is smaller than output size (Stride<1).
 
 #### Fractionally-Strided Convolution <a name="FractionallyStridedConvolution"></a>
+- Stride size is smaller than 1.
+
 
 ### CycleGAN <a name="CycleGAN"></a>
 - [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
@@ -459,8 +473,9 @@ Paper: Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](h
 
 
 ## Important Papers <a name="ImportantPapers"></a>
+- Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
+- Radford, A., Metz, L., and Chintala, S., [Unsupervised representation learning with deep convolutional generative adversarial networks](https://arxiv.org/abs/1511.06434v2)
 - Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
-- Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, - [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)
 - Ledig et al., [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf), 
 - Jiajun Wu et al., [Learning a Probabilistic Latent Space of Object
 Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
@@ -486,6 +501,7 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601.06759.pdf)
 - Oord et al., [Conditional Image Generation with PixelCNN Decoders](https://arxiv.org/pdf/1606.05328.pdf)
 - Salimans et al.,[PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf)
+- Springenberg et al., [Striving for Simplicity: The All Convolutional Net](https://arxiv.org/abs/1412.6806)
 
 ## Courses <a name="Courses"></a>
 - [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
