@@ -518,4 +518,6 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
 
 ## Notes <a name="Notes"></a>
+- [Tensorflow-Generative-Model-Collections-Codes](https://github.com/hwalsuklee/tensorflow-generative-model-collections)
+- [GAN Applications](https://github.com/nashory/gans-awesome-applications)
 - [GMM-Scikit Learn Library](https://scikit-learn.org/stable/modules/mixture.html)
