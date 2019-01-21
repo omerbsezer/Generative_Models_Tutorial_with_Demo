@@ -260,7 +260,7 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 - Total cost: summing to individual negative log-likelihoods (batches of data in training)
 
-![gan_cost](https://user-images.githubusercontent.com/10358317/51477102-706df680-1d98-11e9-8427-1243afc0bbcb.png)
+![gan_cost](https://user-images.githubusercontent.com/10358317/51481550-2ccdb980-1da5-11e9-926a-1473e660c4e3.png)
 
 - Estimate of the expected value over all possible data
 - Discrimator Cost Function:
@@ -289,18 +289,21 @@ Generative models are interesting topic in ML. Generative models are a subset of
 ### DCGAN <a name="DCGAN"></a>
 - Paper: Radford, A., Metz, L., and Chintala, S., [Unsupervised representation learning with deep convolutional generative adversarial networks](https://arxiv.org/abs/1511.06434v2)
 - DCGAN architecture produces high quality and high resolution images in a single pass.
-- DCGANs contain batch normalization.
+- DCGANs contain batch normalization (batch norm: z=(x-mean)/std, batch norm is used between layers).
 - DCGANs also contain only all-convolutional layers instead of contaning convolution, pooling, linear layers together.
 - It optimizes using ADAM optimizer (adaptive gradient desdent algorithm)
 - Discriminator uses Leaky-ReLU (Rectified Linear Unit), generator uses normal ReLU.
 
-![dcgan](https://user-images.githubusercontent.com/10358317/51480436-1c680f80-1da2-11e9-920c-676b5a9a100f.png)
+![dcgan](https://user-images.githubusercontent.com/10358317/51481486-04de5600-1da5-11e9-85ad-383521438ac2.png) [Udemy GAN-VAE]
 
 - Typical Convolution: input size is bigger or equal than output size (Stride>1).
 - Deconvolution: input size is smaller than output size (Stride<1).
 
 #### Fractionally-Strided Convolution <a name="FractionallyStridedConvolution"></a>
 - Stride size is smaller than 1.
+- If stride=2 is used while convolution operation, output image size is 1/2 original image size.
+- If stride=1/2 is used while convolution operation, output image size is 2x original image size.
+- With fractionally-strided convolution (deconvolution), output image size is bigger than input image size.
 
 
 ### CycleGAN <a name="CycleGAN"></a>
