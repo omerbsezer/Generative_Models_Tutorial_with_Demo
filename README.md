@@ -219,27 +219,34 @@ Generative models are interesting topic in ML. Generative models are a subset of
 ![poseguided](https://user-images.githubusercontent.com/10358317/51417513-6e851700-1b8f-11e9-90b8-314377157b6f.png)
 
 ### SRGAN
-[Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf)
+- [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/pdf/1609.04802.pdf)
+- SRGAN: "a generative adversarial network (GAN) for image super-resolution (SR)"
+- They generate super-resolution images from the lower resolution images.
 
 ![srgan](https://user-images.githubusercontent.com/10358317/51417515-6f1dad80-1b8f-11e9-9312-ee6f02e6f4f5.png)
 
 ### StackGAN
-[StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1612.03242v1.pdf)
+- [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1612.03242v1.pdf)
+- Stacked Generative Adversarial Networks (Stack-GAN):  "to  generate  photo-realistic  images  conditioned  on text descriptions".
+- Input: sentence, Output: multiple images fitting the description.
 
 ![stackgan](https://user-images.githubusercontent.com/10358317/51417516-6f1dad80-1b8f-11e9-9309-d44ca62983c7.png)
 
 ### TPGAN
-[Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
+- [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](https://arxiv.org/pdf/1704.04086.pdf)
+- "Synthesis faces in different poses: With a single input image, they create faces in different viewing angles."
 
 ![tp-gan](https://user-images.githubusercontent.com/10358317/51417517-6f1dad80-1b8f-11e9-89ea-09fdaa77d794.png)
 
 ### Anime Generation
-[Towards the Automatic Anime Characters Creation with Generative Adversarial Networks](https://arxiv.org/pdf/1708.05509.pdf)
+- [Towards the Automatic Anime Characters Creation with Generative Adversarial Networks](https://arxiv.org/pdf/1708.05509.pdf)
+- "They explore the training of GAN models specialized on an anime facial image dataset."
+- They build website for their implementation (https://make.girls.moe)
 
 ![animegeneration](https://user-images.githubusercontent.com/10358317/51417518-6fb64400-1b8f-11e9-8205-58d408e3556c.png)
 
 ### 3DGAN
-[Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
+- [Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
 
 ![3dgan](https://user-images.githubusercontent.com/10358317/51417520-6fb64400-1b8f-11e9-8f09-806b6636a13b.png)
 
