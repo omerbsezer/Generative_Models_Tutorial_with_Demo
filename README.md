@@ -182,10 +182,19 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 
 ## Generative Adversial Networks (GANs)
-- There are 2 different networks: generator and discriminator, compete against each other.
 - GANs are interesting because it generates samples exceptionally good.
+- GANs are used in different applications (details are summarized following sections).
+- GANs are different form other generative models (Bayesian Classifier, Variational Autoencoders, Restricted Boltzmann Machines). GANs are not dealing with explicit probabilities, instead, its aim is to reach Nash Equilibrium of a game.
+- RBM generate samples with Monte Carlo Sampling (thousands of iterations are needed to generate, and how many iterations are needed is not known). GANs generate samples with in single pass.
+- There are 2 different networks in GANs: generator and discriminator, compete against each other.
+  - Generator Network tries to fool the discriminator.
+  - Disciminator Network tries not to be fooled.
 
-![gan_gif](https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif) [Blog Open-AI]
+<p align="center">
+<img src="https://user-images.githubusercontent.com/10358317/51377616-65a72d80-1b1c-11e9-8a7b-83c9571eac08.gif">[Blog Open-AI]
+</p>
+
+### GANs Cost Function
 
 ### DCGAN
 
