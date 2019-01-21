@@ -190,22 +190,31 @@ Generative models are interesting topic in ML. Generative models are a subset of
 ### DCGAN
 
 ### CycleGAN
-[Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
+- [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
+- Their algorithm translate an image from one to another: 
+  - Transfer from Monet paintings to landscape photos from Flickr, and vice versa.
+  - Transfer from zebras to horses, and vice versa.
+  - Transfer from summer to winter photos, and vice versa.
 
 ![cyclegan](https://user-images.githubusercontent.com/10358317/51417525-704eda80-1b8f-11e9-93ce-2d3c14a3aee1.jpeg)
 
 ### Pix2Pix
-[Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
+- [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
+- Pix2Pix is an image-to-image translation algorithm: aerials to map, labels to street scene, labels to facade, day to night, edges to photo.
 
 ![pix2pix](https://user-images.githubusercontent.com/10358317/51417511-6e851700-1b8f-11e9-84ed-64cfb0cd6e58.png)
 
 ### PixelDTGAN
-[Pixel-Level Domain Transfer](https://arxiv.org/pdf/1603.07442.pdf)
+- [Pixel-Level Domain Transfer](https://arxiv.org/pdf/1603.07442.pdf)
+- PixelDTGAN generates clothing images from an image.
+- "The  model  transfers  an  input  domain  to  a  target  domain  in  semantic level, and generates the target image in pixel level."
+- "They verify their model through a challenging task of generating a piece of clothing from an input image of a dressed person"
 
 ![pixelgan](https://user-images.githubusercontent.com/10358317/51417512-6e851700-1b8f-11e9-8557-003e9c4e9ec5.png)
 
 ### PoseGuided 
-[Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
+- [Pose Guided Person Image Generation](https://papers.nips.cc/paper/6644-pose-guided-person-image-generation.pdf)
+- "This paper proposes the novel Pose Guided Person Generation Network (PG2 that allows to synthesize person images in arbitrary poses, based on an image of that person and a novel pose"
 
 ![poseguided](https://user-images.githubusercontent.com/10358317/51417513-6e851700-1b8f-11e9-90b8-314377157b6f.png)
 
