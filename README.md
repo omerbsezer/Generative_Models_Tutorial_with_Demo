@@ -209,6 +209,8 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ### DCGAN
 
+#### Fractionally-Strided Convolution
+
 ### CycleGAN
 - [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pdf)
 - Their algorithm translate an image from one to another: 
@@ -326,6 +328,45 @@ efficient texture synthesis."
 
 ![perceptualgan](https://user-images.githubusercontent.com/10358317/51417531-71800780-1b8f-11e9-8df1-0bb1befe4d9c.png)
 
+## Auto-Regressive Models
+- "The basic difference between Generative Adversarial Networks (GANs) and Auto-regressive models is that GANs learn implicit data distribution whereas the latter learns an explicit distribution governed by a prior imposed by model structure" [Sharma]. 
+- Some of the advantages of Auto-Regressive Models over GANs:
+  - **Provides a way to calculate likelihood**: They have advantage of returning explicit probability densities. Hence it can be applied in the application areas related compression and probabilistic planning and exploration.
+  - **The training is more stable than GANs**:"Training a GAN requires finding the Nash equilibrium". Training of PixelRNN, PixelCNN are more stable than GANs. 
+  - **It works for both discrete and continuous data**:"It’s hard to learn to generate discrete data for GAN, like text" [Sharma]. 
+
+### PixelRNN
+Paper: Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601.06759.pdf) (proposed from Google DeepMind)
+- It is used for image completion applications.
+- "It uses probabilistic density models (like Gaussian or Normal distribution) to quantify the pixels of an image as a product of conditional distributions."
+- "This approach turns the modeling problem into a sequence problem wherein the next pixel value is determined by all the previously generated pixel values".
+- There are four different methods to implement PixelRNN:
+  - Row LSTM
+  - Diagonal BiLSTM
+  - Fully Convolutional Network
+  - Multi Scale Network.
+- Cost function: "Negative log likelihood (NLL) is used as the loss and evaluation metric as the network predicts(classifies) the values of pixel from values 0–255." 
+
+![pixelrnn](https://user-images.githubusercontent.com/10358317/51472966-16673400-1d8c-11e9-8974-741247a4b2a8.png)
+
+### PixelCNN
+- Papers: Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601.06759.pdf); Oord et al., [Conditional Image Generation with PixelCNN Decoders](https://arxiv.org/pdf/1606.05328.pdf) (proposed from Google DeepMind).
+- "The main drawback of PixelRNN is that training is very slow as each state needs to be computed sequentially. This can be overcome by using convolutional layers and increasing the receptive field."
+- "PixelCNN lowers the training time considerably as compared to PixelRNN."
+- "The major drawback of PixelCNN is that it’s performance is worse than PixelRNN. Another drawback is the presence of a Blind Spot in the receptive field"
+
+### PixelCNN++
+- Paper: Salimans et al.,[PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf)
+- PixelCNN++ improves the performance of PixelCNN (proposed from OpenAI)
+- Modifications:
+  - Discretized logistic mixture likelihood
+  - Conditioning on whole pixels
+  - Downsampling
+  - Short-cut connections 
+  - Dropout
+- "PixelCNN++ outperforms both PixelRNN and PixelCNN by a margin. When trained on CIFAR-10 the best test log-likelihood is 2.92 bits/pixel as compared to 3.0 of PixelRNN and 3.03 of gated PixelCNN."
+- Details are in the paper [PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf).
+
 
 ## Generative Model in Reinforcement Learning:
 
@@ -337,11 +378,7 @@ Paper: [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03
 ![running_human](https://user-images.githubusercontent.com/10358317/51384409-4cf34380-1b2d-11e9-9aa5-cf8807309e73.gif) [Blog Open-AI]
 
 
-## Auto-Regressive Models
 
-### PixelRNN
-
-### PixelCNN
 
 ## Important Papers
 - Jonathan Ho, Stefano Ermon, [Generative Adversarial Imitation Learning](https://arxiv.org/abs/1606.03476)
@@ -368,7 +405,9 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 - Yang et al., [MIDINET: A CONVOLUTIONAL GENERATIVE ADVERSARIAL NETWORK FOR SYMBOLIC-DOMAIN MUSIC GENERATION](https://arxiv.org/pdf/1703.10847.pdf)
 - Wu et al., [GP-GAN: Towards Realistic High-Resolution Image Blending](https://arxiv.org/pdf/1703.07195.pdf)
 - Li et al., [Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
-
+- Oord et al., [Pixel Recurrent Neural Networks](https://arxiv.org/pdf/1601.06759.pdf)
+- Oord et al., [Conditional Image Generation with PixelCNN Decoders](https://arxiv.org/pdf/1606.05328.pdf)
+- Salimans et al.,[PIXELCNN++: IMPROVING THE PIXEL CNN WITH DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD AND OTHER MODIFICATIONS](https://arxiv.org/pdf/1701.05517.pdf)
 
 ## Courses
 - [Stanford Generative Model Video](https://www.youtube.com/watch?v=5WoItGTWV54)
@@ -376,7 +415,7 @@ Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-
 
 ## References
 - [Blog Open-AI](https://blog.openai.com/generative-models/#going-forward)
-- [PixelRNN, PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
+- [Sharma, PixelRNN/PixelCNN](https://towardsdatascience.com/auto-regressive-generative-models-pixelrnn-pixelcnn-32d192911173)
 - [Udemy GAN-VAE: Deep Learning GANs and Variational Autoencoders](https://www.udemy.com/deep-learning-gans-and-variational-autoencoders/learn/v4/t/lecture/7494546?start=0)
 - [GAN Applications](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900)
 - https://jaan.io/what-is-variational-autoencoder-vae-tutorial/
