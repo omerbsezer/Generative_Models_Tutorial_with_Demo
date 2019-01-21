@@ -195,6 +195,17 @@ Generative models are interesting topic in ML. Generative models are a subset of
 </p>
 
 ### GANs Cost Function
+- Generator and Discriminator try to optimize the opposite cost functions.
+- Discriminator classifies images as a real or fake images with binary classification. 
+- t: target; y: output probability of the discriminator.
+- Real image: t=1; fake image: t=0; y= p(image is real | image) between (0,1)
+
+![binary-class-loss](https://user-images.githubusercontent.com/10358317/51464608-04c76180-1d77-11e9-8c40-429688a502d0.png)
+
+- Binary cost function evaluates discriminator cost function.
+- x: real images only, x_hat: fake images only
+
+![discriminator](https://user-images.githubusercontent.com/10358317/51464920-b8c8ec80-1d77-11e9-894b-74bf5c8ecde8.png)
 
 ### DCGAN
 
