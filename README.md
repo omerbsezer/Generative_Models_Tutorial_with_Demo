@@ -247,16 +247,19 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ### 3DGAN
 - [Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling](http://papers.nips.cc/paper/6096-learning-a-probabilistic-latent-space-of-object-shapes-via-3d-generative-adversarial-modeling.pdf)
+- This paper proposed creating 3D objects with GAN.
+- "They demonstrated that their models are able to generate novel objects and to reconstruct 3D objects from images"
 
 ![3dgan](https://user-images.githubusercontent.com/10358317/51417520-6fb64400-1b8f-11e9-8f09-806b6636a13b.png)
 
 ### Age-cGAN
-[FACE AGING WITH CONDITIONAL GENERATIVE ADVERSARIAL NETWORKS](https://arxiv.org/pdf/1702.01983.pdf)
+- [FACE AGING WITH CONDITIONAL GENERATIVE ADVERSARIAL NETWORKS](https://arxiv.org/pdf/1702.01983.pdf)
+- They proposed the GAN-based method for automatic face aging.
 
 ![age-cgan](https://user-images.githubusercontent.com/10358317/51417523-6fb64400-1b8f-11e9-8e7b-80fe044a6586.png)
 
 ### AnoGAN
-[Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery](https://arxiv.org/pdf/1703.05921.pdf)
+- [Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery](https://arxiv.org/pdf/1703.05921.pdf)
 
 ![anogan](https://user-images.githubusercontent.com/10358317/51417524-704eda80-1b8f-11e9-914c-79ed3c528c21.png)
 
