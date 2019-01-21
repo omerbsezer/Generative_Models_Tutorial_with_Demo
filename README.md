@@ -23,6 +23,8 @@ Generative models are interesting topic in ML. Generative models are a subset of
   - [Cost Function of VAE](#CostFunctionofVAE)
 - [Generative Adversial Networks (GANs)](#GANs)
   - [GANs Cost Function](#GANsCostFunction)
+    - [Discriminator Cost Function](#DiscriminatorCost)
+    - [Generator Cost Function](#GeneratorCost)
   - [DCGAN](#DCGAN)
     - [Fractionally-Strided Convolution](#FractionallyStridedConvolution)
   - [CycleGAN](#CycleGAN)
@@ -237,6 +239,8 @@ Generative models are interesting topic in ML. Generative models are a subset of
 </p>
 
 ### GANs Cost Function <a name="GANsCostFunction"></a>
+
+#### Discriminator Cost Function <a name="DiscriminatorCost"></a>
 - Generator and Discriminator try to optimize the opposite cost functions.
 - Discriminator classifies images as a real or fake images with binary classification. 
 - t: target; y: output probability of the discriminator.
@@ -248,6 +252,35 @@ Generative models are interesting topic in ML. Generative models are a subset of
 - x: real images only, x_hat: fake images only
 
 ![discriminator](https://user-images.githubusercontent.com/10358317/51464920-b8c8ec80-1d77-11e9-894b-74bf5c8ecde8.png)
+
+- G(z): fake image from generator, x: real image
+
+![gen_cost1](https://user-images.githubusercontent.com/10358317/51476986-19682180-1d98-11e9-93c9-3c80dd2343b3.png)
+
+- Total cost: summing to individual negative log-likelihoods (batches of data in training)
+
+![gan_cost](https://user-images.githubusercontent.com/10358317/51477102-706df680-1d98-11e9-8427-1243afc0bbcb.png)
+
+- Estimate of the expected value over all possible data
+- Discrimator Cost Function:
+![gan_cost2](https://user-images.githubusercontent.com/10358317/51477223-ccd11600-1d98-11e9-8665-03a52a971844.png)
+
+#### Generator Cost Function <a name="GeneratorCost"></a>
+- Relation between Generator and Discriminator Cost Functions:
+![gen-disc](https://user-images.githubusercontent.com/10358317/51477360-4e28a880-1d99-11e9-88d4-2411c177b7ea.png)
+
+- In game theory, this situation is called "zero-sum game". Sum of all players in the game is 0.
+- Theta_G: parameters of generator;  Theta_D: parameters of discriminator
+![gen-disc2](https://user-images.githubusercontent.com/10358317/51477622-10784f80-1d9a-11e9-8afe-24d9a5f7bca0.png)
+
+- Pseudocode of GANs:
+  - In the first step: Generator generates some of the real samples and fake samples.
+  - In the second step: Gradient descent of the discriminator is run one iteration.
+  - In the third step: Gradient descent of the generator is run one iteration.
+- Repeat this until seeing the good samples.
+- Some of the researches run third step twice to get better results.
+
+![pseudocode_gan](https://user-images.githubusercontent.com/10358317/51477848-b5932800-1d9a-11e9-8015-edddd7c43f46.png)
 
 ### DCGAN <a name="DCGAN"></a>
 
