@@ -260,36 +260,49 @@ Generative models are interesting topic in ML. Generative models are a subset of
 
 ### AnoGAN
 - [Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery](https://arxiv.org/pdf/1703.05921.pdf)
+- "A deep convolutional generative adversarial network to learn a manifold of normal anatomical variability".
 
 ![anogan](https://user-images.githubusercontent.com/10358317/51417524-704eda80-1b8f-11e9-914c-79ed3c528c21.png)
 
 ### DiscoGAN
-[Learning to Discover Cross-Domain Relations with Generative Adversarial Networks](https://arxiv.org/pdf/1703.05192.pdf)
+- [Learning to Discover Cross-Domain Relations with Generative Adversarial Networks](https://arxiv.org/pdf/1703.05192.pdf)
+- Proposed method transfers style from one domain to another (e.g handbag -> shoes)
+- "DiscoGAN learns cross domain relationship without labels or pairing". 
 
 ![discogan](https://user-images.githubusercontent.com/10358317/51417526-70e77100-1b8f-11e9-8e2d-d25891a02ff3.png)
 
 ### DTN
-[UNSUPERVISED CROSS-DOMAIN IMAGE GENERATION](https://arxiv.org/pdf/1611.02200.pdf)
+- [Unsupervised Cross-Domain Image Generation](https://arxiv.org/pdf/1611.02200.pdf)
+- Proposed method is to create emoji from pictures.
+- "They can synthesize an SVHN image that resembles a given MNIST image, or synthesize a face that matches an emoji." 
 
 ![dtn](https://user-images.githubusercontent.com/10358317/51417527-70e77100-1b8f-11e9-8e0b-9cc45fa2d632.png)
 
 ### IcGAN
-[Invertible Conditional GANs for image editing](https://arxiv.org/pdf/1611.06355.pdf)
+- [Invertible Conditional GANs for image editing](https://arxiv.org/pdf/1611.06355.pdf)
+- "They evaluate encoders to inverse the mapping of a cGAN, i.e., mapping a real image into a latent space and a conditional representation".
+- Proposed method is to reconstruct or edit images with specific attribute.
 
 ![icgan](https://user-images.githubusercontent.com/10358317/51417528-70e77100-1b8f-11e9-94d9-3f0c91cf123a.png)
 
 ### MGAN
-[Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks](https://arxiv.org/pdf/1604.04382.pdf)
+- [Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks](https://arxiv.org/pdf/1604.04382.pdf)
+- "Markovian Generative Adversarial Networks (MGANs), a method for training generative neural networks for
+efficient texture synthesis."
+- "They apply this idea to texture synthesis, style transfer, and video stylization."
 
 ![mgan](https://user-images.githubusercontent.com/10358317/51417529-71800780-1b8f-11e9-9834-a4812af4518f.png)
 
 ### MidiNet
-[MIDINET: A CONVOLUTIONAL GENERATIVE ADVERSARIAL NETWORK FOR SYMBOLIC-DOMAIN MUSIC GENERATION](https://arxiv.org/pdf/1703.10847.pdf)
+- [MIDINET: A CONVOLUTIONAL GENERATIVE ADVERSARIAL NETWORK FOR SYMBOLIC-DOMAIN MUSIC GENERATION](https://arxiv.org/pdf/1703.10847.pdf)
+- "They propose a novel conditional mechanism to exploit available prior knowledge, so that the model can generate melodies either from scratch,  by following a chord sequence, or by conditioning on the melody of previous bars" 
+- "MidiNet can be expanded to generate music with multiple MIDI channels" 
 
 ![midinet](https://user-images.githubusercontent.com/10358317/51417530-71800780-1b8f-11e9-801b-896122c13614.png)
 
 ### PerceptualGAN
-[Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
+- [Perceptual Generative Adversarial Networks for Small Object Detection](https://arxiv.org/pdf/1706.05274v2.pdf)
+- "Proposed method improves small object detection  through  narrowing  representation  difference  of small objects from the large ones"
 
 ![perceptualgan](https://user-images.githubusercontent.com/10358317/51417531-71800780-1b8f-11e9-8df1-0bb1befe4d9c.png)
 
